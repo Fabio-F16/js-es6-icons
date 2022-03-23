@@ -60,13 +60,18 @@ const filterBy = (typeOf) => {
 
 
 const container = document.getElementById('container');
-// const select = document.getElementById('select');
-const animal = document.getElementById('animal');
+const allIcon = document.querySelector('.all');
+const animal = document.querySelector('.animal');
 const vegetable = document.querySelector('.vegetable');
 const user = document.querySelector('.user');
 
 // createTemplate(icon, container);
 
+allIcon.addEventListener('click', function () {
+    container.innerText = '';
+    createTemplate(icon, container);
+
+})
 
 
 animal.addEventListener('click', function () {
