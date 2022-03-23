@@ -2,12 +2,6 @@
 
 // console.log(icon);
 
-const container = document.getElementById('container');
-const select = document.getElementById('select');
-
-createTemplate(icon, container);
-
-
 
 
 
@@ -45,11 +39,52 @@ function createBox(icon) {
  */
 function createTemplate(icon, container) {
 
-    for (let i = 0; i < icon.length; i++) {
-
-        const box = createBox(icon[i]);
+    icon.forEach((element, index, array) => {
+        const box = createBox(icon[index]);
         container.appendChild(box);
+    });
 
-    }
 }
+
+
+
+/**
+ * Given a type, return a list of icons that match that type
+ * @param type - The type of animal you want to filter by.
+ * @returns An array of objects.
+ */
+const filterBy = (typeOf) => {
+    return icon.filter(element => element.type === typeOf);
+}
+
+// fine funzioni ----------------------------------------------
+
+
+const container = document.getElementById('container');
+const animal = document.getElementById('animal');
+const vegetable = document.querySelector('.vegetable');
+const user = document.querySelector('.user');
+
+createTemplate(icon, container);
+
+
+
+
+
+animal.addEventListener('click', function () {
+    filterBy('animal');
+    conosle.log('ho cliccato')
+})
+
+vegetable.addEventListener('click', function () {
+    filterBy('vegetable');
+})
+
+user.addEventListener('click', function () {
+    filterBy('user');
+})
+console.log(filterBy('user'));
+console.log(filterBy('animal'));
+console.log(filterBy('vegetable'));
+
 
