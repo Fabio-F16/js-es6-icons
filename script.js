@@ -46,8 +46,6 @@ function createTemplate(icon, container) {
 
 }
 
-
-
 /**
  * Given a type, return a list of icons that match that type
  * @param type - The type of animal you want to filter by.
@@ -55,12 +53,14 @@ function createTemplate(icon, container) {
  */
 const filterBy = (typeOf) => {
     return icon.filter(element => element.type === typeOf);
+
 }
 
 // fine funzioni ----------------------------------------------
 
 
 const container = document.getElementById('container');
+const select = document.getElementById('select');
 const animal = document.getElementById('animal');
 const vegetable = document.querySelector('.vegetable');
 const user = document.querySelector('.user');
@@ -69,22 +69,26 @@ createTemplate(icon, container);
 
 
 
+// animal.addEventListener('click', function () {
+
+//     filterBy('animal')
+//     createTemplate(icon, container);
+
+//     // console.log(filterBy('animal'));
+//     console.log('ho cliccato')
+// })
+
+// vegetable.addEventListener('click', function () {
+//     filterBy('vegetable');
+//     console.log(filterBy('vegetable'));
+// })
+
+// user.addEventListener('click', function () {
+//     filterBy('user');
+//     console.log(filterBy('user'));
+// })
 
 
-animal.addEventListener('click', function () {
-    filterBy('animal');
-    conosle.log('ho cliccato')
-})
 
-vegetable.addEventListener('click', function () {
-    filterBy('vegetable');
-})
-
-user.addEventListener('click', function () {
-    filterBy('user');
-})
-console.log(filterBy('user'));
-console.log(filterBy('animal'));
-console.log(filterBy('vegetable'));
 
 
