@@ -60,33 +60,33 @@ const filterBy = (typeOf) => {
 
 
 const container = document.getElementById('container');
-const select = document.getElementById('select');
+// const select = document.getElementById('select');
 const animal = document.getElementById('animal');
 const vegetable = document.querySelector('.vegetable');
 const user = document.querySelector('.user');
 
-createTemplate(icon, container);
+// createTemplate(icon, container);
 
 
 
-// animal.addEventListener('click', function () {
+animal.addEventListener('click', function () {
+    container.innerText = '';
+    const animalArrey = filterBy('animal')
+    createTemplate(animalArrey, container);
+    // console.log('ho cliccato')
+})
 
-//     filterBy('animal')
-//     createTemplate(icon, container);
+vegetable.addEventListener('click', function () {
+    container.innerText = '';
+    const vegetableArrey = filterBy('vegetable');
+    createTemplate(vegetableArrey, container);
+})
 
-//     // console.log(filterBy('animal'));
-//     console.log('ho cliccato')
-// })
-
-// vegetable.addEventListener('click', function () {
-//     filterBy('vegetable');
-//     console.log(filterBy('vegetable'));
-// })
-
-// user.addEventListener('click', function () {
-//     filterBy('user');
-//     console.log(filterBy('user'));
-// })
+user.addEventListener('click', function () {
+    container.innerText = '';
+    const userArrey = filterBy('user');
+    createTemplate(userArrey, container);
+})
 
 
 
